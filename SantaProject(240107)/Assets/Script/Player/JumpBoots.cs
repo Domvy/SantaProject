@@ -17,8 +17,8 @@ public class JumpBoots : MonoBehaviour
     {
         if (playerRigid.velocity.y <= 0 && collision.gameObject.tag == "Ground") { Body.GetComponent<PlayerCtrl>().JumpOver(); }
     }
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Ground") { Body.GetComponent<PlayerCtrl>().Jumpping(); }
-    }
+    //private void OnCollisionExit2D(Collision2D collision)
+    //{
+    //    if (collision.gameObject.tag == "Ground") { Body.GetComponent<PlayerCtrl>().Jumpping(); }
+    //}
 }
