@@ -75,8 +75,8 @@ ___
 
   게임 플레이 화면
   
-![움직임1](https://github.com/Domvy/SantaProject/assets/90752171/21f10a9e-3f89-4e25-8a0e-5917e49bab1f)
-![움직임2](https://github.com/Domvy/SantaProject/assets/90752171/461355c8-84e3-4810-9e5a-f8a2aebe893e)
+  ![움직임1](https://github.com/Domvy/SantaProject/assets/90752171/21f10a9e-3f89-4e25-8a0e-5917e49bab1f)
+  ![움직임2](https://github.com/Domvy/SantaProject/assets/90752171/461355c8-84e3-4810-9e5a-f8a2aebe893e)
 
 
 * 세 번째 스테이지는 조금 독특한 방법으로 만들어 보았는데, 건물을 회전시키기 위해서 이미지 스프라이트를 사각형 형태로 만들어 회전시켰다.
