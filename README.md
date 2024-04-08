@@ -31,6 +31,35 @@ ___
   
 #### 프로젝트를 통해 배운 것들  
 
+* 스마트폰의 기종에 따라 해상도, 비율이 다르기 때문에 기종별로 설정하거나, 일정 비율로 통일해놓아야 한다.
+  스크립트를 이용해 해상도 비율을 FHD 비율로 통일하는 방법으로 해결하였다.
+  
+  [CameraRect.cs](SantaProject(240107)/Assets/Resources/CameraRect.cs)
+```
+  private void SetResolution()
+{
+    if (camera == null) { camera = Camera.main; }
+
+    int setWidth = 1920;
+    int setHeight = 1080;
+
+    int deviceWidth = Screen.width;
+    int deviceHeight = Screen.height;
+
+    Screen.SetResolution(setWidth, (int)(((float)deviceHeight / deviceWidth) * setWidth), true);
+
+    if ((float)setWidth / setHeight < (float)deviceWidth / deviceHeight)
+    {
+        float newWidth = ((float)setWidth / setHeight) / ((float)deviceWidth / deviceHeight);
+        camera.rect = new Rect((1f - newWidth) / 2f, 0f, newWidth, 1f);
+    }
+    else
+    {
+        float newHeight = ((float)deviceWidth / deviceHeight) / ((float)setWidth / setHeight);
+        camera.rect = new Rect(0f, (1f - newHeight) / 2f, 1f, newHeight);
+    }
+}
+```
 
 
 #### 특징  
