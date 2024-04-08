@@ -28,7 +28,6 @@ ___
 >> ![start screen_01(done)](https://github.com/Domvy/SantaProject/assets/90752171/906bca4d-1137-4348-b032-c0163acc9166)
 >> ![스테이지2](https://github.com/Domvy/SantaProject/assets/90752171/983060f8-c95c-4cfb-b4bb-f1783c603b19)
 
-게임을 완성하고 구글 앱 스토어 업로드를 목표로 했으나 비공개 테스트 및 각자의 개인 시간 등의 이유로 출시하지는 못했다.
   
 #### 프로젝트를 통해 배운 것들  
 
