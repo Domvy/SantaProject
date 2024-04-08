@@ -31,10 +31,12 @@ ___
   
 #### 프로젝트를 통해 배운 것들  
 
-* 스마트폰의 기종에 따라 해상도, 비율이 다르기 때문에 기종별로 설정하거나, 일정 비율로 통일해놓아야 한다.
+* 스마트폰의 기종에 따라 해상도, 비율이 다르기 때문에 기종별로 설정하거나, 일정 비율로 통일해놓아야 한다.  
   스크립트를 이용해 해상도 비율을 FHD 비율로 통일하는 방법으로 해결하였다.
   
-  [CameraRect.cs](SantaProject(240107)/Assets/Resources/CameraRect.cs)
+  [CameraRect.cs](SantaProject(240107)/Assets/Resources/CameraRect.cs)  
+  [CameraScript.cs](SantaProject(240107)/Assets/Script/GameMgr/CameraScript.cs)
+  
 ```
   private void SetResolution()
 {
@@ -60,7 +62,25 @@ ___
     }
 }
 ```
+* 2D 횡스크롤 게임을 만들면서 당연하게 생각하던 부분들이 막상 어렵게 다가왔었다.  
+  플레이어의 이동과 점프, 발판과의 상호작용 등 찾아보아야 할 부분이 많았다.  
+  플레이어의 이동은 유니티 인풋시스템을 사용하여 구현했고 바닥 물리효과를 위해 velocity 값을 이용해 이동하도록 하였다.
+  
+  ![플레이어인풋](https://github.com/Domvy/SantaProject/assets/90752171/da526ed7-6ea4-4299-a5da-6e3a12ee7637)
+  플레이어 조작 스크립트 : [PlayerCtrl.cs](SantaProject(240107)/Assets/Script/Player/PlayerCtrl.cs)
+  
+  플레이어가 밟으면서 상호작용을 해야 할 발판은 Collider를 사용하고 특정 방향만 인식하도록 PlatformEffecter2D를 사용했다.
+  또한 PhysicsMaterial을 Collider에 사용해 미끄러운 발판 등을 구현했다.  
+  ![스크린샷 2024-04-09 031723](https://github.com/Domvy/SantaProject/assets/90752171/d312eaca-0ecf-4f98-89e6-aa8d3e76609c)
 
+  게임 플레이 화면
+  
+![움직임1](https://github.com/Domvy/SantaProject/assets/90752171/21f10a9e-3f89-4e25-8a0e-5917e49bab1f)
+![움직임2](https://github.com/Domvy/SantaProject/assets/90752171/461355c8-84e3-4810-9e5a-f8a2aebe893e)
+
+
+* 세 번째 스테이지는 조금 독특한 방법으로 만들어 보았는데, 건물을 회전시키기 위해서 이미지 스프라이트를 사각형 형태로 만들어 회전시켰다.
+  플레이어 위치에 맞추어 회전시키고 다시 게임을 이어나가게 하도록 만들었다.
 
 #### 특징  
 사용한 언어  
