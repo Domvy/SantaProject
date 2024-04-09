@@ -82,6 +82,44 @@ ___
 * 세 번째 스테이지는 조금 독특한 방법으로 만들어 보았는데, 건물을 회전시키기 위해서 이미지 스프라이트를 사각형 형태로 만들어 회전시켰다.
   플레이어 위치에 맞추어 회전시키고 다시 게임을 이어나가게 하도록 만들었다.
 
+  건물을 회전시키기 위해 사각형 모양의 스프라이트를 플레이어의 위치를 기준으로 90도씩 회전하게 만들었다.
+  
+  [turnBuilding.cs](SantaProject(240107)/Assets/Script/Map/turnBuilding.cs)
+  > 회전 실행
+  ```
+  private void Turn(bool angle) // 건물 회전 실행
+    {
+        before = bc;
+        bc = angle ? bc != 3 ? ++bc : 0 : bc != 0 ? --bc : 3;        
+        StartCoroutine(TurnBuilding(angle ? 90 : -90));
+    }
+    IEnumerator TurnBuilding(float angle) // 회전 방향 코루틴
+    {
+        isRunning = true;
+        cube[bc].SetActive(true);
+        float rot = 0;
+        Vector3 direction;
+        direction = angle == 90 ? Vector3.up : Vector3.down;
+        rb.constraints = RigidbodyConstraints2D.FreezeAll;
+        input.enabled = false;
+        while (rot < Math.Abs(angle))
+        {
+            rot += speed;
+            this.gameObject.transform.Rotate(direction * speed);
+            yield return new WaitForSeconds(0.01f);
+        }
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        input.enabled = true;
+        rot = 0;        
+        cube[before].SetActive(false);
+        isRunning = false;      
+        StartCoroutine(Delay());
+     }
+   ```
+  회전과 동시에 플레이어 위치가 이동되면서 입체적인 느낌이 들었으면 좋겠다는 생각으로 구현 해 보았다.
+  ![스테이지3](https://github.com/Domvy/SantaProject/assets/90752171/a69b67e6-94f6-4e94-827c-12f6aaed9a1d)
+  
+
 #### 특징  
 사용한 언어  
 
