@@ -118,9 +118,19 @@ ___
    ```
   회전과 동시에 플레이어 위치가 이동되면서 입체적인 느낌이 들었으면 좋겠다는 생각으로 구현 해 보았다.
   ![스테이지3](https://github.com/Domvy/SantaProject/assets/90752171/a69b67e6-94f6-4e94-827c-12f6aaed9a1d)
-  
+
+  3개의 스테이지와 3개의 미니게임으로 마무리하고 작업을 끝냈다.
+  > 기타 스크린샷
+  >> ![카드게임](https://github.com/Domvy/SantaProject/assets/90752171/8844022f-3779-4931-99f6-d36031c7cdcd)
+  >> ![선물전달하기](https://github.com/Domvy/SantaProject/assets/90752171/ec16e30c-5b07-40f8-8273-6c5260379082)
+  >> ![눈던지기](https://github.com/Domvy/SantaProject/assets/90752171/35cbaaf6-7553-4f97-8daa-a8e873e65909)
+
 
 #### 특징  
-사용한 언어  
+* 사용한 언어  
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Domvy)](https://github.com/anuraghazra/github-readme-stats)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Domvy)](https://github.com/anuraghazra/github-readme-stats)  
+
+* 유니티 버전
+  Unity 2021.3.25f1(LTS)
+* 플레이 영상
