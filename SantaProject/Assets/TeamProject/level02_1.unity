@@ -6879,7 +6879,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2004583622655729171, guid: 1f5cbb3a45e6c5844a5cadfe066f0ef6, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1
+      value: 3.12
       objectReference: {fileID: 0}
     - target: {fileID: 2004583622655729171, guid: 1f5cbb3a45e6c5844a5cadfe066f0ef6, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -15754,7 +15754,7 @@ MonoBehaviour:
   mapSizeXL: 3
   mapSizeXR: 760
   mapSizeYD: 1
-  mapSizeYH: 15
+  mapSizeYH: 20
 --- !u!1 &1569080829
 GameObject:
   m_ObjectHideFlags: 0

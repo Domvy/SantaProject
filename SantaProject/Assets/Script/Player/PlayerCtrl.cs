@@ -169,7 +169,7 @@ public class PlayerCtrl : MonoBehaviour
     {
         nowCollisionObj = collision.transform;
         if (collision.gameObject.CompareTag("DangerGround")) { Damaged(collision.transform); }
-    }
+    }    
     IEnumerator DamagedDelay() // 데미지 코루틴
     {
         if (canDamaged)
